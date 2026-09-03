@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papakura History Atlas</title>
+<meta name="description" content="A source-attributed factual timeline of Papakura, Auckland, Aotearoa New Zealand.">
+<style>
+:root{--ink:#17212b;--muted:#64707d;--paper:#f7f5ef;--card:#fff;--line:#d9d5ca;--accent:#183b56;--accent2:#2d6a4f}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+header{background:var(--accent);color:#fff;padding:64px 22px 54px}.wrap{max-width:1100px;margin:auto}
+.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;opacity:.75}
+h1{font-size:clamp(2.5rem,7vw,5.4rem);line-height:.95;margin:12px 0 18px;letter-spacing:-.05em}
+header p{max-width:700px;font-size:1.08rem;opacity:.9}
+.badge{display:inline-block;margin-top:18px;border:1px solid rgba(255,255,255,.35);padding:7px 11px;border-radius:999px;font-size:.8rem}
+main{padding:34px 22px 70px}.grid{display:grid;grid-template-columns:1.35fr .65fr;gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 5px 18px rgba(23,33,43,.04)}
+h2{margin:0 0 14px;font-size:1.45rem}.small{color:var(--muted);font-size:.9rem}
+.timeline{margin-top:22px}.event{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.year{font-size:1.25rem;font-weight:800;color:var(--accent)}
+.event h3{margin:0 0 7px;font-size:1.05rem}.source{font-size:.82rem;color:var(--muted)}a{color:var(--accent2)}
+.controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.yearbox{font-size:2.2rem;font-weight:800;min-width:100px}
+input[type=range]{width:min(100%,700px);accent-color:var(--accent)}
+.fact{padding:13px 0;border-bottom:1px solid var(--line)}.fact:last-child{border-bottom:0}
+.map{height:280px;border-radius:14px;overflow:hidden;background:#e7e3d8;position:relative}
+.map iframe{width:100%;height:100%;border:0}
+.notice{background:#eef3f5;border-left:4px solid var(--accent);padding:14px 16px;border-radius:8px;margin-top:18px}
+footer{max-width:1100px;margin:auto;padding:0 22px 45px;color:var(--muted);font-size:.85rem}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.event{grid-template-columns:70px 1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="eyebrow">Auckland · Aotearoa New Zealand</div>
+<h1>Papakura<br>History Atlas</h1>
+<p>A source-attributed factual timeline of Papakura. Select a documented year to see facts recorded for that year. Years without an entry are intentionally left blank.</p>
+<span class="badge">Facts only · No historical interpretation</span>
+</div>
+</header>
+
+<main class="wrap">
+<div class="card">
+<h2>Explore the timeline</h2>
+<div class="controls">
+<div class="yearbox" id="yearLabel">1842</div>
+<input id="yearSlider" type="range" min="1300" max="2026" value="1842" step="1" aria-label="Select year">
+</div>
+<p class="small" id="status"></p>
+<div id="event"></div>
+</div>
+
+<div class="grid" style="margin-top:24px">
+<section class="card">
+<h2>Documented facts</h2>
+<div class="fact"><strong>Location:</strong> Papakura is a town on the shores of the Pahurehure inlet of the Manukau Harbour.</div>
+<div class="fact"><strong>Distance:</strong> Te Ara describes Papakura as 34 km south of Auckland city.</div>
+<div class="fact"><strong>Military:</strong> Papakura Military Camp was established on the outskirts in 1939; it was closed from 1992 to 2002.</div>
+<div class="fact"><strong>Marae:</strong> Papakura Marae was established as an incorporated society in 1980.</div>
+<div class="fact"><strong>Current local-board area:</strong> Auckland Council says the Papakura Local Board area includes Drury, Alfriston, Takanini, Hingaia, Red Hill, Pahurehure and the current Papakura town centre.</div>
+</section>
+
+<section class="card">
+<h2>Current location</h2>
+<div class="map">
+<iframe title="Papakura map" loading="lazy"
+src="https://www.openstreetmap.org/export/embed.html?bbox=174.91%2C-37.11%2C174.98%2C-37.02&layer=mapnik&marker=-37.065%2C174.943"></iframe>
+</div>
+<p class="small">Map shows the present-day Papakura area; it is not a historical boundary map.</p>
+</section>
+</div>
+
+<section class="card" style="margin-top:24px">
+<h2>Source register</h2>
+<p class="small">The entries below are based on published sources. The site deliberately preserves the source wording at a factual level and does not attempt to decide between historical interpretations.</p>
+<ul>
+<li><a href="https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm" target="_blank" rel="noopener">Auckland Council — Papakura Local Board attachments (2019)</a></li>
+<li><a href="https://teara.govt.nz/en/auckland-places/page-17" target="_blank" rel="noopener">Te Ara — Papakura and the rural south-east</a></li>
+<li><a href="https://www.papakuramarae.co.nz/history" target="_blank" rel="noopener">Papakura Marae — History</a></li>
+<li><a href="https://www.papakuramarae.co.nz/copy-of-about-us" target="_blank" rel="noopener">Papakura Marae — Who We Are</a></li>
+<li><a href="https://www.aucklandcouncil.govt.nz/about-auckland-council/how-auckland-council-works/local-boards/all-local-boards/papakura-local-board/Pages/default.aspx" target="_blank" rel="noopener">Auckland Council — Papakura Local Board</a></li>
+</ul>
+<div class="notice"><strong>Method:</strong> A blank year means this prototype has no source-backed entry for that exact year. It does not mean that nothing happened in Papakura during that year.</div>
+</section>
+</main>
+
+<footer>
+Papakura History Atlas · Prototype · Built as a factual, source-attributed local-history interface.
+</footer>
+
+<script>
+const events = {
+"1300": {title:"Māori occupation of the wider Manukau Harbour area", text:"Auckland Council historical material states that archaeological investigations indicate Māori first occupied the Manukau Harbour area from the 1300s.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1400": {title:"Settlements established in the wider Manukau Harbour area", text:"Auckland Council historical material states that settlements were established in the Manukau Harbour area by the 1400s.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1834": {title:"European movement through the area", text:"Auckland Council historical material records that Europeans first moved through the area in 1834.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1842": {title:"Papakura Block purchased", text:"The Auckland Council historical account states that the Papakura Block was purchased in 1842 for £200 and two horses. It says the land extended from Papatoetoe to just south of present-day Papakura.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1844": {title:"Hingaia Block purchased", text:"The Auckland Council historical account records the purchase of the 2,193-acre Hingaia Block by Adam Chisholm in 1844.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1846": {title:"George Loverson Cole arrives", text:"The Auckland Council historical account records George Loverson Cole as arriving in the area in 1846–47.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1853": {title:"Papakura village subdivided", text:"Papakura village was subdivided into town lots in 1853.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1855": {title:"Population growth", text:"The Auckland Council historical account records a surge in population growth from 1855.", source:"Auckland Council — Papakura Local Board attachments (2019)", url:"https://infocouncil.aucklandcouncil.govt.nz/Open/2019/09/PPK_20190925_ATT_7737_EXCLUDED.htm"},
+"1939": {title:"Papakura Military Camp established", text:"Te Ara records that Papakura Military Camp was established on the outskirts of the town in 1939.", source:"Te Ara — Papakura and the rural south-east", url:"https://teara.govt.nz/en/auckland-places/page-17"},
+"1979": {title:"Papakura Marae building project begins", text:"Papakura Marae states that its building project commenced in 1979 with construction of the dining hall and ablution block.", source:"Papakura Marae — History", url:"https://www.papakuramarae.co.nz/history"},
+"1980": {title:"Papakura Marae established", text:"Papakura Marae states that it was established as an incorporated society in 1980 to provide cultural, health and social services for Papakura and surrounding suburbs.", source:"Papakura Marae — Who We Are", url:"https://www.papakuramarae.co.nz/copy-of-about-us"},
+"1992": {title:"Military camp closure period begins", text:"Te Ara records that the Papakura Military Camp was closed from 1992 to 2002.", source:"Te Ara — Papakura and the rural south-east", url:"https://teara.govt.nz/en/auckland-places/page-17"},
+"2002": {title:"Military camp closure period ends", text:"Te Ara records that the Papakura Military Camp was closed from 1992 to 2002.", source:"Te Ara — Papakura and the rural south-east", url:"https://teara.govt.nz/en/auckland-places/page-17"},
+"2026": {title:"Present-day Papakura", text:"Papakura is described by Te Ara as a town on the shores of the Pahurehure inlet of the Manukau Harbour. Auckland Council describes the current Papakura Local Board area as including Drury, Alfriston, Takanini, Hingaia, Red Hill, Pahurehure and the current Papakura town centre.", source:"Te Ara; Auckland Council — Papakura Local Board", url:"https://teara.govt.nz/en/auckland-places/page-17"}
+};
+
+const slider=document.getElementById("yearSlider"), label=document.getElementById("yearLabel"), event=document.getElementById("event"), status=document.getElementById("status");
+function render(){
+ const y=slider.value; label.textContent=y;
+ const e=events[y];
+ if(!e){status.textContent="No fact entry is currently recorded for this exact year.";event.innerHTML="";return;}
+ status.textContent="Documented source-backed entry";
+ event.innerHTML=`<div class="event"><div class="year">${y}</div><div><h3>${e.title}</h3><div>${e.text}</div><div class="source">Source: <a href="${e.url}" target="_blank" rel="noopener">${e.source}</a></div></div></div>`;
+}
+slider.addEventListener("input",render); render();
+</script>
+</body>
+</html>
